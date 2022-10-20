@@ -1,26 +1,39 @@
+.nav__container {
+  padding: 0.5rem;
+  padding-bottom: 0rem;
+  position: relative;
+  z-index: 10000;
+}
+
 .nav {
   position: sticky;
-  top: 0;
+  top: 8px;
   z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  margin: auto;
+  width: calc(100% - 1rem);
+  max-width: 1440px;
   height: 4.375rem;
   padding-inline: var(--content-padding);
+  padding-inline: 25px;
   background-color: var(--color4);
   transition: var(--fast-transition);
   transition: top 0.3s ease-in-out;
+  box-shadow: 0px 0px 4px 3px rgba(1, 20, 28, 0.1);
+  border-radius: 3px;
   &.down {
     top: -100%;
   }
   &.up {
     box-shadow: 0px 2px 3px 1px rgba(1, 20, 28, 0.1);
+    top: 8px;
   }
   &.active {
     border-bottom-right-radius: 0px;
     position: sticky;
-    top: 0;
+    top: 8px;
     &__list {
       right: 0;
     }
@@ -36,15 +49,42 @@
     }
   }
 
-  &__bar {
-    width: 2.5rem;
-    cursor: pointer;
-    svg path {
-      fill: var(--color3);
+  &__icons {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        width: 30px;
+        margin-left: 1.5rem;
+        transition: var(--fast-transition);
+        path {
+          fill: var(--color3);
+        }
+        &:hover {
+          path {
+            fill: var(--color5);
+          }
+        }
+      }
     }
-    &:hover {
-      svg path {
-        fill: var(--color5);
+  }
+  .nav__cart-desk {
+    display: none;
+    margin-left: 2rem;
+    width: 30px;
+    svg {
+      cursor: pointer;
+      transition: var(--fast-transition);
+      path {
+        fill: var(--color3);
+      }
+      &:hover {
+        path {
+          fill: var(--color5);
+        }
       }
     }
   }
@@ -65,22 +105,26 @@
 
   &__list {
     position: fixed;
-    top: 4.375rem;
+    top: 4.875rem;
     right: -98%;
-    z-index: 1000;
+    z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90vw;
+    width: 80vw;
     max-width: 40.625rem; // 650px
     height: calc(100vh - 70px);
     text-align: center;
     opacity: 0;
-    background-color: var(--color1);
+    background-color: var(--color4);
+    box-shadow: 0px 2px 6px 1px rgba(1, 20, 28, 0.2);
     transition: var(--fast-transition);
+    @media screen and (min-width: 770px) {
+      box-shadow: none;
+    }
     &.active {
-      right: 0;
+      right: 0.45rem;
       opacity: 1;
     }
   }
@@ -141,8 +185,11 @@
 
   @media screen and (min-width: 900px) {
     .nav {
-      &__bar {
+      &__icons {
         display: none;
+      }
+      &__cart-desk {
+        display: flex;
       }
       &__list {
         position: static;

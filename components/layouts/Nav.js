@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import BurguerBar from "../svg/BurguerBar";
+import Cart from "../svg/Cart";
 
 const Nav = () => {
   const [scroll, setScroll] = useState("inicio");
@@ -61,8 +62,13 @@ const Nav = () => {
           <img src="/logo.svg" alt="pescaderia-carenero-logo" />
         </picture>
       </Link>
-      <span className="nav__bar" onClick={handleBar}>
-        <BurguerBar id="nav__bar" />
+      <span className="nav__icons">
+        <span className="nav__bar" onClick={handleBar}>
+          <BurguerBar id="nav__bar" />
+        </span>
+        <span className="nav__cart">
+          <Cart modifier="cart-nav" />
+        </span>
       </span>
       <div
         className={`nav__transparent ${navIsActive ? "active" : "inactive"}`}
@@ -87,6 +93,9 @@ const Nav = () => {
             <a className="nav__link">Contacto</a>
           </Link>
         </li>
+        <span className="nav__cart-desk">
+          <Cart modifier="cart-nav-desk" />
+        </span>
       </ul>
     </nav>
   );

@@ -59,7 +59,7 @@ const Footer = () => {
       </div>
       <img
         className="footer__img"
-        src="/logo.png"
+        src="logo.svg"
         alt="pescaderia carenero's logo"
       />
     </footer>

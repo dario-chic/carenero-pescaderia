@@ -2,10 +2,11 @@ import Head from "next/head";
 import React from "react";
 // import Header from "../Header";
 import Footer from "./Footer";
+import Header from "./Header";
 import Nav from "./Nav";
 // import Footer from "./Footer";
 
-const PageLayout = ({ children, title, description, loading }) => {
+const PageLayout = ({ children, title, description, header }) => {
   return (
     <>
       <Head>
@@ -57,9 +58,9 @@ const PageLayout = ({ children, title, description, loading }) => {
         {/* <meta name="twitter:image" content="portada.webp" /> */}
       </Head>
       <Nav />
-      {/* <Header loading={loading} /> */}
+      {header && <Header />}
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

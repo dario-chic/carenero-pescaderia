@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  padding: clamp(2rem, 3%, 4rem);
+  padding-bottom: 1rem;
+  background-color: var(--color3);
+  border-top-left-radius: var(--border);
+  border-top-right-radius: var(--border);
+  svg,
+  svg path {
+    fill: #fff;
+    width: 20px;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 3%;
+    margin: auto;
+    width: 150px;
+    opacity: 0.4;
+  }
+
+  &__info-container {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: left;
+    gap: 2rem;
+  }
+
+  &__title {
+    font-family: var(--font1);
+    font-size: 1.4rem;
+    font-weight: 1000;
+    margin-bottom: 0.5rem;
+    color: var(--color4);
+  }
+
+  &__text,
+  .contact {
+    font-family: var(--font2);
+    color: var(--color4);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    .contact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.35rem;
+      transition: var(--fast-transition);
+      &:hover {
+        color: var(--color3);
+      }
+    }
+    svg {
+      margin-right: 0.5rem;
+      path {
+        fill: var(--color4);
+      }
+    }
+  }
+
+  &__horario {
+    justify-self: left;
+    svg {
+      margin-right: 0.5rem;
+      path {
+        fill: none;
+        stroke: var(--color4);
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 6rem;
+    text-align: center;
+  }
+
+  &__pescaderia-carenero {
+    margin-bottom: 0.3rem;
+    font-family: var(--font1);
+    color: var(--color1);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &__dario-chic {
+    font-family: var(--font1);
+    color: var(--color4);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .link {
+    color: var(--color1);
+  }
+}

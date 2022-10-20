@@ -4,13 +4,15 @@
 body {
   background-color: var(--color4);
   letter-spacing: 0.3px;
+  scroll-behavior: smooth;
   &.navIsActive {
     overflow-y: hidden;
   }
 }
 
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  font-family: var(--font1);
 }
 
 a {
@@ -18,4 +20,21 @@ a {
   color: white;
 }
 
+.btn {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--color1);
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color1);
+  transition: var(--fast-transition);
+  &:hover {
+    background-color: var(--color1-20);
+    color: var(--color4);
+  }
+}
+
 @import "nav";
+@import "header";
+@import "main";
+@import "footer";
