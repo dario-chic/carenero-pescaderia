@@ -1,0 +1,21 @@
+@import "normalize";
+@import "variables";
+
+body {
+  background-color: var(--color4);
+  letter-spacing: 0.3px;
+  &.navIsActive {
+    overflow-y: hidden;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@import "nav";
