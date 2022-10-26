@@ -45,3 +45,38 @@
     }
   }
 }
+
+.separator {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  margin-block: 1.5rem;
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 38%;
+    height: 1px;
+    background-color: var(--color3);
+  }
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 38%;
+    height: 1px;
+    background-color: var(--color3);
+  }
+  img {
+    width: 60px;
+  }
+}
