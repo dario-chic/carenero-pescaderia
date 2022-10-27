@@ -15,7 +15,7 @@ const Header = () => {
         <p className="header__desc2">
           Porque tu hogar, merece los mejores productos del mar.
         </p>
-        <a href="#/products" className="btn btn--header">
+        <a href="#products" className="btn btn--header">
           Ver Productos
         </a>
       </div>

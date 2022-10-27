@@ -4,7 +4,7 @@ import Search from "./svg/Search";
 const Filters = ({ filters, setFilters }) => {
   return (
     <form className="filters">
-      <span className="filters__results">67 resultados.</span>
+      {/* <span className="filters__results">67 resultados.</span> */}
       <div className="filters__options">
         <label className="search-name" htmlFor="search-name">
           <Search modifier="search-icon" />

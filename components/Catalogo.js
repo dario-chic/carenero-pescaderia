@@ -17,8 +17,6 @@ const Catalogo = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const { name, price, type } = filters;
-
   useEffect(() => {
     setLoading(true);
     helpHttp()

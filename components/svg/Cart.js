@@ -1,11 +1,12 @@
 import React from "react";
 
-const Cart = ({ modifier }) => {
+const Cart = ({ modifier, onClick }) => {
   return (
     <svg
       id={modifier}
-      width="33"
-      height="33"
+      onClick={onClick}
+      width="36"
+      height="36"
       viewBox="0 0 33 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

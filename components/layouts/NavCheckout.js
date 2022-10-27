@@ -5,7 +5,7 @@ import BurguerBar from "../svg/BurguerBar";
 import Cart from "../svg/Cart";
 import Fish from "../svg/Fish";
 
-const Nav = () => {
+const NavCheckout = () => {
   const [scroll, setScroll] = useState("inicio");
   const [navIsActive, setNavIsActive] = useState(false);
   const nav = useRef();
@@ -54,7 +54,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`nav nav--home ${
+      className={`nav nav--checkout ${
         scroll === "inicio" ? "start" : scroll ? "up" : "down"
       } ${navIsActive ? "active" : "inactive"}`}
       ref={nav}
@@ -79,31 +79,13 @@ const Nav = () => {
         ref={list}
       >
         <li className="nav__item" onClick={handleNav}>
-          <Link className="nav__link" href="#info">
-            <a className="nav__link">Información</a>
+          <Link className="nav__link" href="/#products">
+            <a className="nav__link">{`< `}Volver al Catalogo</a>
           </Link>
         </li>
-        <li className="nav__item" onClick={handleNav}>
-          <Link className="nav__link" href="#products">
-            <a className="nav__link">Productos</a>
-          </Link>
-        </li>
-        <li className="nav__item" onClick={handleNav}>
-          <Link href="#contacto">
-            <a className="nav__link">Contacto</a>
-          </Link>
-        </li>
-        {/* <span className="nav__cart-desk">
-          <div className="cart-fish">
-            <Fish id="cart-fish__fish" />
-            <span className="cart-fish__number">2</span>
-          </div>
-          <Cart modifier="cart-nav-desk" />
-        </span> */}
-        <ProductCart modifier="desk" />
       </ul>
     </nav>
   );
 };
 
-export default Nav;
+export default NavCheckout;

@@ -6,7 +6,7 @@ import Header from "./Header";
 import Nav from "./Nav";
 // import Footer from "./Footer";
 
-const PageLayout = ({ children, title, description, header }) => {
+const PageLayout = ({ children, title, description, header, nav }) => {
   return (
     <>
       <Head>
@@ -57,7 +57,7 @@ const PageLayout = ({ children, title, description, header }) => {
         />
         {/* <meta name="twitter:image" content="portada.webp" /> */}
       </Head>
-      <Nav />
+      {nav}
       {header && <Header />}
       <main>{children}</main>
       <Footer />

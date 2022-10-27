@@ -33,7 +33,7 @@ const information = [
 
 const Information = () => {
   return (
-    <section className="section section--info" id="info">
+    <section className="section section--info">
       <div className="section__container info">
         {information.map((el, i) => (
           <article key={i} className="info">

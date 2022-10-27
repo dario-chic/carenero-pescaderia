@@ -36,14 +36,27 @@ export const productsSlice = createSlice({
           ? { ...product, quantity: product.quantity - 1 }
           : product
       );
+
+      localStorage.setItem("PCCart", JSON.stringify(state.cart));
     },
     deleteAllFromCart: (state, id) => {
-      state.cart = state.cart.filter((product) => product.id !== id.payload);
+      state.cart = state.cart.filter((item) => item.id !== id.payload);
+
+      // state.cart = state.cart.map((product) =>
+      //   product.id === id.payload ? { ...product, quantity: 0 } : product
+      // );
+
+      localStorage.setItem("PCCart", JSON.stringify(state.cart));
     },
   },
 });
 
-export const { addProducts, getLSCart, addCartProduct, deleteCartProduct } =
-  productsSlice.actions;
+export const {
+  addProducts,
+  getLSCart,
+  addCartProduct,
+  deleteCartProduct,
+  deleteAllFromCart,
+} = productsSlice.actions;
 
 export default productsSlice.reducer;

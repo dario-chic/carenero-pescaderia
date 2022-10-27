@@ -32,9 +32,9 @@ const Products = ({ filters, products, loading }) => {
 
   return (
     <div className="products__container">
-      {filteredProducts.map((el, i) => (
-        <Product key={i} el={el} />
-      ))}
+      {filteredProducts.map((el, i) =>
+        el.available ? <Product key={i} el={el} /> : false
+      )}
     </div>
   );
 };

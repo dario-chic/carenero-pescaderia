@@ -21,14 +21,20 @@
   background-color: var(--color4);
   transition: var(--fast-transition);
   transition: top 0.3s ease-in-out;
-  box-shadow: 0px 0px 4px 3px rgba(1, 20, 28, 0.1);
+  box-shadow: 0px 0px 3px 3px rgba(1, 20, 28, 0.2);
   border-radius: 3px;
   &.down {
     top: -100%;
+    width: 100%;
+    max-width: 100%;
   }
   &.up {
+    // top: 8px;
+    top: 0px;
+    width: 100%;
+    max-width: 100%;
     box-shadow: 0px 2px 3px 1px rgba(1, 20, 28, 0.1);
-    top: 8px;
+    border-radius: 0px;
   }
   &.active {
     border-bottom-right-radius: 0px;
@@ -36,6 +42,27 @@
     top: 8px;
     &__list {
       right: 0;
+    }
+  }
+
+  &--checkout {
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    &.down {
+      top: -100%;
+    }
+    &.up {
+      box-shadow: 0px 2px 3px 1px rgba(1, 20, 28, 0.1);
+      top: 0;
+    }
+    &.active {
+      border-bottom-right-radius: 0px;
+      position: sticky;
+      top: 0;
+      &__list {
+        right: 0;
+      }
     }
   }
 
@@ -52,13 +79,13 @@
   &__icons {
     display: flex;
     align-items: center;
-    span {
+    .nav__bar {
       display: flex;
       align-items: center;
       cursor: pointer;
       svg {
         width: 30px;
-        margin-left: 1.5rem;
+        // margin-left: 1.5rem;
         transition: var(--fast-transition);
         path {
           fill: var(--color3);
@@ -71,22 +98,9 @@
       }
     }
   }
-  .nav__cart-desk {
+
+  .cart.desk {
     display: none;
-    margin-left: 2rem;
-    width: 30px;
-    svg {
-      cursor: pointer;
-      transition: var(--fast-transition);
-      path {
-        fill: var(--color3);
-      }
-      &:hover {
-        path {
-          fill: var(--color5);
-        }
-      }
-    }
   }
 
   &__transparent {
@@ -184,28 +198,26 @@
   }
 
   @media screen and (min-width: 900px) {
-    .nav {
-      &__icons {
-        display: none;
-      }
-      &__cart-desk {
-        display: flex;
-      }
-      &__list {
-        position: static;
-        flex-direction: row;
-        align-items: center;
-        opacity: 1;
-        height: fit-content;
-        width: fit-content;
-        background-color: none;
-      }
+    &__icons {
+      display: none;
+    }
+    .cart.desk {
+      display: flex;
+    }
+    &__list {
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      opacity: 1;
+      height: fit-content;
+      width: fit-content;
+      background-color: none;
+    }
 
-      &__item {
-        margin-bottom: 0;
-        font-size: 1.063rem; //17px
-        margin-left: 2rem;
-      }
+    &__item {
+      margin-bottom: 0;
+      font-size: 1.063rem; //17px
+      margin-left: 2rem;
     }
   }
 }

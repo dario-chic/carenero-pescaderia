@@ -11,6 +11,21 @@
   }
 }
 
+.about {
+  text-align: center;
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 1000;
+    color: var(--color3);
+  }
+  &__description {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.4;
+  }
+}
+
 .section__container.info {
   display: grid;
   grid-template-columns: repeat(1, minmax(1fr));
@@ -53,7 +68,7 @@
   width: 100%;
   max-width: 360px;
   margin: auto;
-  margin-block: 1.5rem;
+  margin-block: 1.3rem;
   &::after {
     position: absolute;
     right: 0;

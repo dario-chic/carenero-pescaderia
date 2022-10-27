@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import About from "../components/About";
-import Catalogo from "../components/Catalogo";
-import Information from "../components/Information";
-import Nav from "../components/layouts/Nav";
+import NavCheckout from "../components/layouts/NavCheckout";
 import PageLayout from "../components/layouts/PageLayout";
 import { getLSCart } from "../store/slices/products/productsSlice";
 
@@ -15,10 +12,8 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <PageLayout header={true} nav={<Nav />}>
-      <About />
-      <Information />
-      <Catalogo />
+    <PageLayout header={false} nav={<NavCheckout />}>
+      <p>xddd</p>
     </PageLayout>
   );
 }
