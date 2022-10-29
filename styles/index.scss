@@ -65,20 +65,61 @@ a {
   height: 100%;
   margin: auto;
   text-align: center;
+  white-space: pre-wrap;
+  .btn {
+    margin-top: 0.8rem;
+    &:hover {
+      color: var(--color3);
+    }
+    &.ws {
+      display: flex;
+      align-items: center;
+      background-color: var(--color1);
+      color: var(--color4);
+      border: none;
+      &:hover {
+        background-color: var(--color3);
+      }
+      svg {
+        margin-right: 0.3rem;
+        width: 22px;
+        height: fit-content;
+
+        path {
+          fill: var(--color4);
+        }
+      }
+    }
+  }
+
   svg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    path {
+      fill: var(--color1);
+    }
   }
   &__header {
     color: var(--color1);
     margin-bottom: 0.3rem;
   }
   &__msg {
+    margin-bottom: 0.5rem;
     color: var(--color5);
     font-size: 0.95rem;
     font-weight: 500;
     max-width: 450px;
   }
+}
+
+.full-message {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  margin: auto;
 }
 
 @import "cart";

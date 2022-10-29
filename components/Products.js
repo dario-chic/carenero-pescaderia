@@ -39,7 +39,7 @@ const Products = ({ filters, products, loading }) => {
         <Loader />
       ) : filteredProducts.length > 0 ? (
         filteredProducts.map((el, i) =>
-          el.available ? <Product key={i} el={el} /> : false
+          el.available ? <Product key={i} item={el} /> : false
         )
       ) : (
         <Message

@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <Provider store={store}>
       <Component {...pageProps} />

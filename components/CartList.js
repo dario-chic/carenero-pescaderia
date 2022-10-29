@@ -5,33 +5,24 @@ import Message from "./Message";
 import Product from "./Product";
 import CartX from "./svg/CartX";
 import Loader from "./Loader";
+import useCart from "../hooks/useCart";
 
 const CartList = ({ btnFn, url, next, loading = false }) => {
-  const cart = useSelector((state) => state.products.cart).filter(
-    (item) => item.quantity > 0
-  );
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    let total = 0;
-    if (cart && cart.length > 0) {
-      cart.forEach((el) => (total = total + el.price * el.quantity));
-    }
-    setTotal(total);
-  }, [cart]);
+  const { cart, total } = useCart();
 
   return (
     <div className="cart-list">
       <div className="cart-list__products">
         {cart && cart.length > 0 ? (
           cart.map((el, i) =>
-            el.quantity > 0 ? <Product key={i} el={el} /> : false
+            el.quantity > 0 ? <Product key={i} item={el} /> : false
           )
         ) : (
           <Message
             icon={<CartX />}
             header="No hay productos en el carrito"
             msg="Para comprar, dirigete a nuestro catalogo y añade los productos de tu preferencia"
+            action={{ link: "/#products", text: "Ir al Catálogo" }}
           />
         )}
       </div>

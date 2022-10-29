@@ -1,11 +1,6 @@
 import React from "react";
 
-const InfoForm = ({ info, setInfo, errors, setErrors }) => {
-  const handleForm = (e) => {
-    setInfo({ ...info, [e.target.name]: e.target.value });
-    setErrors({});
-  };
-
+const InfoForm = ({ info, errors, handleChange }) => {
   return (
     <form id="info-form" className="info-form">
       <label htmlFor="info-form__name">
@@ -16,7 +11,7 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
           name="name"
           placeholder="Escribe tu nombre"
           value={info.name}
-          onChange={handleForm}
+          onChange={handleChange}
           required
         />
         <span className="tag">Nombre y Apellido</span>
@@ -25,22 +20,6 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
           {errors.name && <span className="error">{errors.name}</span>}
         </div>
       </label>
-      {/* <label htmlFor="info-form__email">
-        <input
-          id="info-form__email"
-          className="info-form__email"
-          type="email"
-          name="email"
-          placeholder="Escribe tu correo"
-          value={info.email}
-          onChange={handleForm}
-          required
-        />
-        <span className="tag">Correo Electrónico</span>
-        <div className="info-form__messages">
-          {errors.email && <span className="error">{errors.email}</span>}
-        </div>
-      </label> */}
       <label htmlFor="info-form__number">
         <input
           id="info-form__number"
@@ -49,7 +28,7 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
           name="number"
           placeholder="Escribe tu número de teléfono"
           value={info.number}
-          onChange={handleForm}
+          onChange={handleChange}
           required
         />
         <span className="tag">Número Telefónico</span>
@@ -61,9 +40,7 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
         <select
           name="delivery"
           id="info-form__delivery"
-          onChange={(e) => {
-            setInfo({ ...info, delivery: e.target.value });
-          }}
+          onChange={handleChange}
           defaultValue={info.delivery}
         >
           <option value={"false"}>Recoger en Pick Up</option>
@@ -81,7 +58,7 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
             name="address"
             placeholder="Detalla la dirección de la entrega"
             value={info.address}
-            onChange={handleForm}
+            onChange={handleChange}
             required
           />
 
@@ -107,7 +84,7 @@ const InfoForm = ({ info, setInfo, errors, setErrors }) => {
           name="msg"
           placeholder="Detalla información adicional relevante. (Opcional)"
           value={info.msg}
-          onChange={handleForm}
+          onChange={handleChange}
         />
         <span className="tag">Mensaje Adicional (opcional)</span>
       </label>

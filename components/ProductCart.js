@@ -1,23 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import useCart from "../hooks/useCart";
 import CartList from "./CartList";
 import Cart from "./svg/Cart";
 import Fish from "./svg/Fish";
 
 const ProductCart = ({ modifier, scroll }) => {
-  const [total, setTotal] = useState(0);
+  const { cart, total } = useCart();
   const [cartIsActive, setCartIsActive] = useState(false);
-  const cart = useSelector((state) => state.products.cart);
-
-  useEffect(() => {
-    let total = 0;
-
-    if (cart && cart.length > 0) {
-      cart.forEach((el) => (total = total + el.price * el.quantity));
-    }
-
-    setTotal(total);
-  }, [cart]);
 
   const handleBar = () => {
     if (cartIsActive) {
