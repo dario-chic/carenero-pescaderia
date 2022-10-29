@@ -65,15 +65,13 @@ const InfoForm = ({ info, errors, handleChange }) => {
           <span className="tag">Dirección de la Entrega</span>
           <div className="info-form__messages">
             {errors.delivery && (
-              <>
-                <span className="error">
-                  Por favor, indica la dirección de envío.
-                </span>
-                <span className="extra">
-                  El delivery cuenta con costo adicional.
-                </span>
-              </>
+              <span className="error">
+                Por favor, indica la dirección de envío.
+              </span>
             )}
+            <span className="extra">
+              El delivery cuenta con costo adicional.
+            </span>
           </div>
         </label>
       )}
