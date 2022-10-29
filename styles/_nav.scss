@@ -111,9 +111,9 @@
     }
   }
 
-  // .cart.desk {
-  // display: none;
-  // }
+  .cart.desk {
+    display: none;
+  }
 
   .cart-fish {
     overflow-x: hidden;
@@ -223,7 +223,7 @@
       display: none;
     }
     .cart.desk {
-      display: flex;
+      display: block;
     }
     &__list {
       position: static;

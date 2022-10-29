@@ -26,8 +26,10 @@ const Message = ({ icon, header, msg, ws = false, action = false }) => {
 
       {ws && (
         <a
-          href={`https://api.whatsapp.com/send?phone=584123899751&text=¡Hola, Pescadería Carenero! 👋`}
           className="btn ws"
+          href={`https://api.whatsapp.com/send?phone=584123899751&text=¡Hola, Pescadería Carenero! 👋`}
+          target="_blank"
+          rel="noreferrer"
         >
           <Whatsapp modifier="ws" /> Contáctanos por Whatsapp
         </a>

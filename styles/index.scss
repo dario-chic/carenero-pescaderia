@@ -56,6 +56,28 @@ a {
   }
 }
 
+.btn.ws {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  background-color: var(--color1);
+  color: var(--color4);
+  border: none;
+  &:hover {
+    background-color: var(--color3);
+  }
+  svg {
+    width: 20px;
+    margin-right: 0.3rem;
+    path {
+      fill: var(--color4);
+    }
+  }
+}
+
 .message {
   display: flex;
   flex-direction: column;
