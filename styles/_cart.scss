@@ -1,14 +1,28 @@
 .cart {
   position: relative;
+  z-index: 9999;
   width: 40px;
   height: 35px;
   margin-left: 1.5rem;
   transition: var(--fast-transition);
+  &__bg {
+    display: none;
+    position: absolute;
+    top: -25px;
+    right: -33px;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+  }
   &.active {
     .cart__products {
       visibility: visible;
       opacity: 1;
       transform: translateY(5px);
+    }
+    .cart__bg {
+      display: block;
     }
   }
   #cart-svg {

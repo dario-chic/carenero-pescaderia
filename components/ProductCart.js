@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import useCart from "../hooks/useCart";
 import CartList from "./CartList";
@@ -8,6 +8,8 @@ import Fish from "./svg/Fish";
 const ProductCart = ({ modifier, scroll }) => {
   const { cart, total } = useCart();
   const [cartIsActive, setCartIsActive] = useState(false);
+
+  const productCart = useRef();
 
   const handleBar = () => {
     if (cartIsActive) {
@@ -25,10 +27,22 @@ const ProductCart = ({ modifier, scroll }) => {
     if (!scroll) setCartIsActive(false);
   }, [scroll]);
 
+  // useEffect(() => {
+  //   document.addEventListener("click", (e) => {
+  //     // e.stopPropagation();
+
+  //     console.log(e.target);
+
+  //     if (e.target !== productCart.current) setCartIsActive(false);
+  //   });
+  // }, []);
+
   return (
-    <span
+    <div
       className={`cart ${modifier} ${cartIsActive ? "active" : "inactive"}`}
+      ref={productCart}
     >
+      <div className="cart__bg" onClick={handleBar}></div>
       {cart && cart.length > 0 && total > 0 ? (
         <div className="cart-fish" onClick={handleBar}>
           <Fish id="cart-fish__fish" />
@@ -46,7 +60,7 @@ const ProductCart = ({ modifier, scroll }) => {
           next="Realizar Pedido"
         />
       </div>
-    </span>
+    </div>
   );
 };
 
