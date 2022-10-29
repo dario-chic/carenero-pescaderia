@@ -68,7 +68,7 @@ const Nav = () => {
         <span className="nav__bar" onClick={handleBar}>
           <BurguerBar id="nav__bar" />
         </span>
-        <ProductCart modifier="mobile" />
+        <ProductCart modifier="mobile" scroll={scroll} />
       </span>
       <div
         className={`nav__transparent ${navIsActive ? "active" : "inactive"}`}
@@ -100,7 +100,7 @@ const Nav = () => {
           </div>
           <Cart modifier="cart-nav-desk" />
         </span> */}
-        <ProductCart modifier="desk" />
+        <ProductCart modifier="desk" scroll={scroll} />
       </ul>
     </nav>
   );

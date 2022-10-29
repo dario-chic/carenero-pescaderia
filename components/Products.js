@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Loader from "./Loader";
+import Message from "./Message";
 
 import Product from "./Product";
+import Error from "./svg/Error";
 
 const Products = ({ filters, products, loading }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -32,8 +35,18 @@ const Products = ({ filters, products, loading }) => {
 
   return (
     <div className="products__container">
-      {filteredProducts.map((el, i) =>
-        el.available ? <Product key={i} el={el} /> : false
+      {loading ? (
+        <Loader />
+      ) : filteredProducts.length > 0 ? (
+        filteredProducts.map((el, i) =>
+          el.available ? <Product key={i} el={el} /> : false
+        )
+      ) : (
+        <Message
+          icon={<Error />}
+          header="No se encontraron resultados"
+          msg="Lo sentimos, no pudimos encontrar resultados para esta busquedad. Intente cambiando los parametros de busqueda o reiniciando la pagina."
+        />
       )}
     </div>
   );

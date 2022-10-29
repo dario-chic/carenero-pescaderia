@@ -68,7 +68,6 @@ const NavCheckout = () => {
         <span className="nav__bar" onClick={handleBar}>
           <BurguerBar id="nav__bar" />
         </span>
-        <ProductCart modifier="mobile" />
       </span>
       <div
         className={`nav__transparent ${navIsActive ? "active" : "inactive"}`}
@@ -80,7 +79,7 @@ const NavCheckout = () => {
       >
         <li className="nav__item" onClick={handleNav}>
           <Link className="nav__link" href="/#products">
-            <a className="nav__link">{`< `}Volver al Catalogo</a>
+            <a className="nav__link">Volver al Catalogo</a>
           </Link>
         </li>
       </ul>

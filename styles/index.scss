@@ -21,6 +21,7 @@ body {
   background-color: var(--color4);
   letter-spacing: 0.3px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   &.navIsActive {
     overflow-y: hidden;
   }
@@ -29,6 +30,11 @@ body {
 * {
   scroll-behavior: smooth !important;
   font-family: var(--font1);
+}
+
+main {
+  position: relative;
+  min-height: calc(100vh - 150px);
 }
 
 a {
@@ -50,9 +56,37 @@ a {
   }
 }
 
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  &__header {
+    color: var(--color1);
+    margin-bottom: 0.3rem;
+  }
+  &__msg {
+    color: var(--color5);
+    font-size: 0.95rem;
+    font-weight: 500;
+    max-width: 450px;
+  }
+}
+
 @import "cart";
 @import "nav";
 @import "header";
 @import "main";
 @import "catalogo";
+@import "checkout";
 @import "footer";
+
+@import "loader";

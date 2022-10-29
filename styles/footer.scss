@@ -19,7 +19,7 @@
     right: 3%;
     margin: auto;
     width: 150px;
-    opacity: 0.4;
+    opacity: 0.8;
   }
 
   &__info-container {
@@ -57,7 +57,7 @@
       margin-bottom: 0.35rem;
       transition: var(--fast-transition);
       &:hover {
-        color: var(--color3);
+        color: var(--color1);
       }
     }
     svg {
@@ -97,11 +97,14 @@
 
   &__dario-chic {
     font-family: var(--font1);
-    color: var(--color4);
+    color: var(--color1);
     font-weight: 700;
     font-size: 0.85rem;
   }
   .link {
-    color: var(--color1);
+    color: var(--color4);
+    &:hover {
+      color: var(--color2);
+    }
   }
 }

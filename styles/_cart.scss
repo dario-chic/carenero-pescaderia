@@ -4,11 +4,11 @@
   height: 35px;
   margin-left: 1.5rem;
   transition: var(--fast-transition);
-  &:hover {
+  &.active {
     .cart__products {
       visibility: visible;
       opacity: 1;
-      transform: translateY(0%);
+      transform: translateY(5px);
     }
   }
   #cart-svg {
@@ -50,15 +50,18 @@
   }
   &-fish__number {
     position: absolute;
-    top: -17.8px;
+    top: -1px;
     bottom: 0;
-    left: 0;
-    right: -1px;
+    left: 16px;
+    right: 0;
     z-index: 9999;
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
-    font-size: 1.1rem;
+    // margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 30px;
+    font-size: 0.95rem;
     color: var(--color4);
     font-weight: 700;
     text-shadow: 0px 1px 3px rgb(1, 20, 28, 0.95);
@@ -68,22 +71,24 @@
   &__products {
     position: absolute;
     top: 50px;
-    right: -30px;
+    right: -10px;
+    z-index: -1;
     width: 90vw;
     max-width: 650px;
     height: 100vh;
-    max-height: 500px;
+    max-height: 510px;
     background-color: var(--color4);
     box-shadow: rgb(1, 20, 28, 0.25) 0px 0px 2px 2px;
     border-radius: 3px;
     visibility: hidden;
     opacity: 0;
     transform: translateY(-25%);
-    &:hover {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0%);
-    }
+    transition: var(--fast-transition);
+    // &:hover {
+    //   visibility: visible;
+    //   opacity: 1;
+    //   transform: translateY(0%);
+    // }
     &-bg {
       position: absolute;
       top: -30px;
@@ -98,27 +103,31 @@
 
 .cart-list {
   position: relative;
-  padding: 3%;
-  padding-bottom: 0;
+  padding: 1rem 0 0 1rem;
   height: 100%;
   &__products {
-    height: calc(100% - 90px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    height: calc(100% - 100px);
     overflow-y: auto;
     .product {
       flex-direction: row;
       align-items: center;
       width: 100%;
-      max-width: max-content;
-      padding-block: 0.5rem;
+      max-width: 100%;
 
       .stars {
         display: none;
       }
 
       &__img {
-        width: 30%;
+        width: 35%;
         height: 100%;
         max-height: 160px;
+        max-width: 160px;
         // max-width: 150px;
         object-fit: cover;
         border-radius: 3px;
@@ -166,10 +175,14 @@
 
   &__next {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 90px;
+    gap: 0.5rem;
+    height: 100px;
+    padding: 1rem;
     border-top: solid 1px var(--color3-50);
+    background-color: var(--color4);
     .btn {
       &.disabled {
         background-color: gray;
@@ -187,12 +200,18 @@
   &__total {
     // position: absolute;
     // right: 3%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--color3);
-    span {
-      margin-left: 0.3rem;
+    .text {
       color: var(--color1);
+    }
+    .number {
+      font-size: 1.4rem;
+      margin-left: 0.3rem;
+      color: var(--color3);
     }
   }
 }

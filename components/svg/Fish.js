@@ -4,7 +4,7 @@ const Fish = ({ modifier }) => {
   return (
     <svg
       id={modifier}
-      width="45"
+      width="42"
       height="30"
       viewBox="0 0 21 11"
       fill="none"

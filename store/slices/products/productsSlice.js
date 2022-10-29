@@ -39,8 +39,8 @@ export const productsSlice = createSlice({
 
       localStorage.setItem("PCCart", JSON.stringify(state.cart));
     },
-    deleteAllFromCart: (state, id) => {
-      state.cart = state.cart.filter((item) => item.id !== id.payload);
+    deleteAllFromCart: (state) => {
+      state.cart = [];
 
       // state.cart = state.cart.map((product) =>
       //   product.id === id.payload ? { ...product, quantity: 0 } : product

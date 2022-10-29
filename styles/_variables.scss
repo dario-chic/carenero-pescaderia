@@ -5,6 +5,7 @@
   --color2-20: rgba(66, 195, 247, 0.2);
   --color3: #003a6b;
   --color3-50: rgba(0, 58, 107, 0.5);
+  --color3-20: rgba(0, 58, 107, 0.2);
   --color4: #f0fafe;
   --color5: #000b0f;
   --color5-2: rgba(0, 11, 15, 0.2);
@@ -15,11 +16,12 @@
   --box-shadow: rgb(1, 20, 28, 0.25) 0px 2px 3px 1px;
 
   --general-padding: clamp(1.56rem, calc(-0.67rem + 11.16vw), 9.38rem);
+  --general-padding: clamp(1.25rem, calc(0.6rem + 3.26vw), 3.13rem);
   --content-padding: 25px;
   --max-width: 1124px;
-  --content-width: 1140px;
+  --content-width: 1240px;
 
-  --fast-transition: all 0.2s ease-in-out;
+  --fast-transition: all 0.15s ease-in-out;
   --slow-transition: all 0.4s ease-in-out;
 }
 

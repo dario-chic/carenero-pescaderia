@@ -4,9 +4,12 @@
   padding-block: 0 60px;
   text-align: left;
   margin: auto;
-
+  &--checkout {
+    padding-inline: 20px;
+  }
   &__container {
     margin-inline: auto;
+    width: 100%;
     max-width: var(--content-width);
   }
 }
