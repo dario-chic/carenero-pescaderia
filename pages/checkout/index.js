@@ -25,9 +25,8 @@ export default function Home() {
   useEffect(() => {
     setLoading(true);
     helpHttp()
-      .get("https://carenero-pescaderia.vercel.app/api/products")
+      .get("http://192.168.250.9:3000/api/products")
       .then((products) => {
-        console.log(products);
         dispatch(addProducts(products));
         setLoading(false);
       });

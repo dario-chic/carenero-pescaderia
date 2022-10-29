@@ -36,6 +36,12 @@ const useCheckout = (validationsForm) => {
 
   useEffect(() => {
     localStorage.setItem("PCCheckout", JSON.stringify(checkout));
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, [checkout]);
 
   const handleChange = (e) => {
@@ -58,12 +64,6 @@ const useCheckout = (validationsForm) => {
       Object.keys(errs).length === 0
         ? setCheckout("b")
         : setErrors(validationsForm(info));
-
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
     }
 
     if (checkout === "b") {
