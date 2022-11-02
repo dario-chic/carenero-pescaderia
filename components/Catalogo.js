@@ -20,7 +20,7 @@ const Catalogo = () => {
   useEffect(() => {
     setLoading(true);
     helpHttp()
-      .get("https://www.pescaderiacarenero.com/api/products")
+      .get("http://192.168.250.17:3000/api/products")
       .then((products) => {
         dispatch(addProducts(products));
         setLoading(false);

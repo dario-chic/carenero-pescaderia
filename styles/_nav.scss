@@ -20,11 +20,9 @@
   background-color: var(--color4);
   box-shadow: 0px 2px 6px 1px rgba(1, 20, 28, 0.2);
   border-radius: 3px;
-  transition: top 0.3s ease-in-out;
   transition: var(--slow-transition);
   &.down {
-    // top: -100%;
-    transform: translateY(-150%);
+    top: -100%;
     // width: 100%;
     // max-width: 100%;
   }
