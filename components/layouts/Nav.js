@@ -125,7 +125,7 @@ const Nav = () => {
         </ul>
       </nav>
       {cart.length > 0 && (
-        <div className={`nav__next ${cartIsActive || scroll ? "hidden" : ""}`}>
+        <div className={`nav__next ${cartIsActive ? "hidden" : ""}`}>
           <div className={`cart }`} onClick={handleCart}>
             {cart && cart.length > 0 && total > 0 ? (
               <div className="cart-fish">

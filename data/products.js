@@ -47,7 +47,7 @@ const products = [
     type: "enteros",
     price: 12,
     description: "Pargo Entero limpio, precio por peso completo.",
-    img: "/products/tentaculos.jpg",
+    img: "/products/pulpo-enteros.jpg",
     available: true,
   },
   {

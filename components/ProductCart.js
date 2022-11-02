@@ -11,9 +11,7 @@ const ProductCart = ({ modifier, scroll }) => {
   const dispatch = useDispatch();
   const { cart, total } = useCart();
 
-  useEffect(() => {
-    console.log(cartIsActive);
-  }, [cartIsActive]);
+  useEffect(() => {}, [cartIsActive]);
 
   const handleBar = (e) => {
     e.stopPropagation();
