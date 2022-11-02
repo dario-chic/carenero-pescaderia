@@ -55,6 +55,11 @@ const useCheckout = (validationsForm) => {
 
   const handleCheckout = async (e) => {
     e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
 
     if (!cart || cart.length === 0) return false;
 

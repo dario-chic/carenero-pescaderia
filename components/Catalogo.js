@@ -20,7 +20,7 @@ const Catalogo = () => {
   useEffect(() => {
     setLoading(true);
     helpHttp()
-      .get("https://carenero-pescaderia.vercel.app/api/products")
+      .get("https://www.pescaderiacarenero.com/api/products")
       .then((products) => {
         dispatch(addProducts(products));
         setLoading(false);
