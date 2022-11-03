@@ -13,7 +13,7 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         <meta charSet="utf-8" />
         <link
           rel="icon"
-          href="https://www.pescaderiacarenero.com/logo.ico"
+          href="https://www.pescaderiacarenero.com/logo.ico3"
           type="image/ico"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +33,10 @@ const PageLayout = ({ children, title, description, header, nav }) => {
           content="pescadería caracas, pescaderia, pescadería online, caracas pescado, pescado en caracas, pescado barato, pescado fresco caracas"
         />
         <meta name="robots" content="index" />
-        {/* <meta name="image" content="portada.webp" /> */}
+        <meta
+          name="image"
+          content="https://www.pescaderiacarenero.com/portada.webp"
+        />
         <link rel="canonical" href="https://www.pescaderiacarenero.com/" />
         <link rel="apple-touch-icon" sizes="192x192" href="logo192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="logo512x512.png" />
@@ -46,7 +49,10 @@ const PageLayout = ({ children, title, description, header, nav }) => {
             "Pescadería online en Caracas, los mejores productos al mejor precio."
           }
         />
-        {/* <meta property="og:image" content="portada.webp" /> */}
+        <meta
+          property="og:image"
+          content="https://www.pescaderiacarenero.com/portada.webp"
+        />
         <meta property="og:url" content="https://www.pescaderiacarenero.com/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -59,7 +65,10 @@ const PageLayout = ({ children, title, description, header, nav }) => {
             "Pescadería online en Caracas, los mejores productos al mejor precio."
           }
         />
-        {/* <meta name="twitter:image" content="portada.webp" /> */}
+        <meta
+          name="twitter:image"
+          content="https://www.pescaderiacarenero.com/portada.webp"
+        />
       </Head>
       {nav}
       {header && <Header />}
