@@ -14,10 +14,22 @@ const Product = ({ item }) => {
       <img className="product__img" src={item.img} alt={item.name} />
       <div className="product__content">
         <h4 className="product__title">{item.name}</h4>
-        <span className="product__price">
-          USD$ {parseFloat(item.pricexu || item.price).toFixed(2)}
-          {item.pricexu ? <span>x Paquete Apróx.</span> : <span>xKg</span>}
-        </span>
+        <div className="product__price">
+          <div className="product__price-xkg">
+            USD$ {parseFloat(item.price).toFixed(2)}
+            <span>Precio x Kilo.</span>
+          </div>
+          {item.pricexu ? (
+            <div className="product__price-xpack">
+              USD$ {parseFloat(item.pricexu).toFixed(2)}
+              <span>Precio Apróx. x Paquete.</span>
+            </div>
+          ) : (
+            <p className="product__price-cliente">
+              (Kilos definidos por el cliente)
+            </p>
+          )}
+        </div>
         <Stars />
         <p className="product__description">{item.description}</p>
         {cart.find((el) => el.id === item.id) ? (

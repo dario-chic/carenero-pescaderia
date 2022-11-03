@@ -74,16 +74,24 @@ const useCheckout = (validationsForm) => {
     if (checkout === "b") {
       setLoading(true);
 
-      let usdToBs = await helpHttp()
-        .get("https://s3.amazonaws.com/dolartoday/data.json")
-        .then((res) => {
-          console.log(res);
-          if (!res.err) {
-            return res.USD.promedio;
-          } else {
-            return false;
-          }
-        });
+      let dolar = await helpHttp().get(
+        "https://s3.amazonaws.com/dolartoday/data.json"
+      );
+      let usdToBs = undefined;
+      console.log(typeof dolar, dolar instanceof Error, dolar);
+
+      if (
+        (dolar instanceof DOMException && dolar.name == "AbortError") ||
+        dolar instanceof Error
+      ) {
+        usdToBs = false;
+      } else {
+        !dolar.err ? (usdToBs = dolar.USD.promedio_real) : (usdToBs = false);
+      }
+
+      // if (dolar.USD.promedio_real !== undefined) {
+      //   usdToBs = dolar.USD.promedio_real;
+      // }
 
       let mensaje = `¡Hola, Pescadería Carenero! 👋%20%0a%20%0a
 Me gustaría hacer un pedido con los siguientes productos que elegí desde su catálogo online:
@@ -101,7 +109,9 @@ ${cart
 💵 *Total Apróximado* = $${total}
 ${
   usdToBs && usdToBs > 0
-    ? `%20%0a%20%0a💸 *Cambio a Bs* = ${(total * usdToBs).toFixed(2)}Bs`
+    ? `%20%0a%20%0a💸 *Cambio a Bs (Tasa BCV)* = ${(total * usdToBs).toFixed(
+        2
+      )}Bs`
     : ""
 }
 
