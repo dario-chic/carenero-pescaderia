@@ -6,6 +6,7 @@ const products = [
     name: "Parguitos de Ración",
     type: "enteros",
     price: 7,
+    pricexu: 6,
     description:
       "Paquetes de pargos pequeños (2 a 5 unidades) (Aprox. 800g - +1Kg)",
     img: "/products/parguitos-enteros.webp",
