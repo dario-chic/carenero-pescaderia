@@ -23,14 +23,14 @@ const PageLayout = ({ children, title, description, header, nav }) => {
           name="description"
           content={
             description ||
-            "Pescadería online en Caracas, los mejores productos al mejor precio."
+            "Pescadería online en Caracas, los mejores productos marinos al mejor precio."
           }
         />
 
         <meta name="author" content="Dario Chic" />
         <meta
           name="keywords"
-          content="pescadería caracas, pescaderia, pescadería online, caracas pescado, pescado en caracas, pescado barato, pescado fresco caracas"
+          content="pescadería caracas, pescaderia, pescadería online, caracas pescado, pescado en caracas, pescado barato, pescado fresco, pescaderia carenero"
         />
         <meta name="robots" content="index" />
         <meta
