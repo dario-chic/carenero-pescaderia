@@ -16,14 +16,21 @@ const Catalogo = () => {
     type: "todos",
   });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setLoading(true);
+    setError(false);
     helpHttp()
       .get("http://192.168.250.17:3000/api/products")
       .then((products) => {
-        dispatch(addProducts(products));
-        setLoading(false);
+        if (!products.err) {
+          dispatch(addProducts(products));
+          setLoading(false);
+          setError(false);
+        } else {
+          setError(true);
+        }
       });
   }, [dispatch]);
 
@@ -37,7 +44,12 @@ const Catalogo = () => {
         </p>
         <Separator />
         <Filters setFilters={setFilters} filters={filters} />
-        <Products products={products} filters={filters} loading={loading} />
+        <Products
+          products={products}
+          filters={filters}
+          loading={loading}
+          err={error}
+        />
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ const products = [
     name: "Parguitos de Ración",
     type: "enteros",
     price: 7,
-    pricexu: 7,
     description:
       "Paquetes de pargos pequeños (2 a 5 unidades) (Aprox. 800g - +1Kg)",
     img: "/products/parguitos-enteros.webp",
@@ -17,7 +16,6 @@ const products = [
     name: "Róbalo Entero",
     type: "enteros",
     price: 8,
-    pricexu: 8,
     description:
       "Róbalo Entero Fresco procesado al gusto del cliente, precio por peso completo.",
     img: "/products/robalo-enteros.webp",
@@ -28,7 +26,6 @@ const products = [
     name: "Pargo Entero Rojo",
     type: "enteros",
     price: 8,
-    pricexu: 8,
     description:
       "Pargo Entero Fresco procesado al gusto del cliente, precio por peso completo.",
     img: "/products/pargo-enteros.webp",
@@ -39,7 +36,6 @@ const products = [
     name: "Mero Entero",
     type: "enteros",
     price: 10,
-    pricexu: 10,
     description:
       "Mero Entero Fresco procesado al gusto del cliente, precio por peso completo.",
     img: "/products/mero-enteros.webp",
@@ -50,7 +46,6 @@ const products = [
     name: "Pulpo Entero",
     type: "enteros",
     price: 12,
-    pricexu: 12,
     description: "Pargo Entero limpio, precio por peso completo.",
     img: "/products/pulpo-enteros.webp",
     available: true,
@@ -311,7 +306,6 @@ const products = [
     name: "Lomo de Atún",
     type: "lomos",
     price: 8,
-    pricexu: 8,
     description: "Lomo de Espada Atún, peso a preferencia del cliente.",
     img: "/products/atun-lomo.webp",
     available: true,

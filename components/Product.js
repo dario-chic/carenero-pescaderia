@@ -15,8 +15,8 @@ const Product = ({ item }) => {
       <div className="product__content">
         <h4 className="product__title">{item.name}</h4>
         <span className="product__price">
-          USD$ {parseFloat(item.price).toFixed(2)}
-          <span>xKg</span>
+          USD$ {parseFloat(item.pricexu || item.price).toFixed(2)}
+          {item.pricexu ? <span>x Paquete Apróx.</span> : <span>xKg</span>}
         </span>
         <Stars />
         <p className="product__description">{item.description}</p>

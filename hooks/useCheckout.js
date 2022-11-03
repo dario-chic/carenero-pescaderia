@@ -72,13 +72,17 @@ const useCheckout = (validationsForm) => {
     }
 
     if (checkout === "b") {
-      let usdToBs = 0;
       setLoading(true);
 
-      await helpHttp()
+      let usdToBs = await helpHttp()
         .get("https://s3.amazonaws.com/dolartoday/data.json")
         .then((res) => {
-          usdToBs = res.USD.promedio;
+          console.log(res);
+          if (!res.err) {
+            return res.USD.promedio;
+          } else {
+            return false;
+          }
         });
 
       let mensaje = `¡Hola, Pescadería Carenero! 👋%20%0a%20%0a
@@ -89,9 +93,9 @@ ${cart
   .sort((a, b) => (parseInt(a.price) > parseInt(b.price) ? 1 : -1))
   .map(
     (item) =>
-      `🐟 *${item.name} (${item.quantity} unid.)* = $${
-        item.quantity * item.price
-      }%20%0a%20%0a`
+      `🐟 *${item.name} (${item.quantity} ${
+        item.pricexu ? "unid" : "kg"
+      }.)* = $${item.quantity * item.pricexu || item.price}%20%0a%20%0a`
   )
   .join("")}
 💵 *Total Apróximado* = $${total}
@@ -132,7 +136,7 @@ https://www.pescaderiacarenero.com/
         localStorage.removeItem("PCCheckout");
         dispatch(deleteAllFromCart());
         router.push("/checkout/success");
-      }, 1000);
+      }, 500);
 
       window.open(
         `https://api.whatsapp.com/send?phone=584123899751&text=${mensaje}`,

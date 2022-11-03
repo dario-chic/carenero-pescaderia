@@ -5,7 +5,7 @@ import Message from "./Message";
 import Product from "./Product";
 import Error from "./svg/Error";
 
-const Products = ({ filters, products, loading }) => {
+const Products = ({ filters, products, loading, err }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const { name, type, price } = filters;
 
@@ -37,6 +37,12 @@ const Products = ({ filters, products, loading }) => {
     <div className="products__container">
       {loading ? (
         <Loader />
+      ) : err ? (
+        <Message
+          icon={<Error />}
+          header="No se pudo cargar los resultados"
+          msg="Lo sentimos, al parecer hubo un error. Verifica tu conexión a internet o prueba reiniciando la página."
+        />
       ) : filteredProducts.length > 0 ? (
         filteredProducts.map((el, i) =>
           el.available ? <Product key={i} item={el} /> : false
