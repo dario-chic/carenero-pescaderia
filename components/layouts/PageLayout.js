@@ -13,7 +13,7 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         <meta charSet="utf-8" />
         <link
           rel="icon"
-          href="https://www.pescaderiacarenero.com/logo.ico3"
+          href="https://www.pescaderiacarenero.com/logo.ico"
           type="image/ico"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
