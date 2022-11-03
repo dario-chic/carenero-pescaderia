@@ -22,7 +22,7 @@ const Catalogo = () => {
     setLoading(true);
     setError(false);
     helpHttp()
-      .get("http://192.168.250.17:3000/api/products")
+      .get("https://www.pescaderiacarenero.com/api/products")
       .then((products) => {
         if (!products.err) {
           dispatch(addProducts(products));
