@@ -11,7 +11,11 @@ const PageLayout = ({ children, title, description, header, nav }) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="logo.ico" type="image/ico" />
+        <link
+          rel="icon"
+          href="https://www.pescaderiacarenero.com/logo.ico"
+          type="image/ico"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#151b25" />
         <title>{title || "Pescadería Carenero"}</title>
