@@ -10,7 +10,7 @@ const useCart = () => {
 
   useEffect(() => {
     let total = 0;
-    cart.forEach((item) => (total = total + item.price * item.quantity));
+    cart.forEach((item) => (total = total + item.pricexu * item.quantity));
 
     setTotal(total);
   }, [cart]);

@@ -32,7 +32,7 @@ const CartList = ({ btnFn, url, next, loading = false }) => {
         ) : (
           <>
             <span className="cart-list__total">
-              <span className="text">Total:</span>
+              <span className="text">Total Apróx:</span>
               <span className="number">${total}</span>
             </span>
             <Link href={url}>
