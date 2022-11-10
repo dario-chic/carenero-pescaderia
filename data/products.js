@@ -93,7 +93,7 @@ const products = [
   },
   {
     id: 10,
-    name: "Pampano en Ruedas",
+    name: "Pámpano en Ruedas",
     type: "ruedas",
     price: 8,
     pricexu: 4,

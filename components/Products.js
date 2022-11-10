@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import clearAccents from "../helpers/helpClearAccents";
 import Loader from "./Loader";
 import Message from "./Message";
 
@@ -12,7 +13,12 @@ const Products = ({ filters, products, loading, err }) => {
   useEffect(() => {
     setFilteredProducts([]);
     const a = [...products].filter((el) => {
-      if (!el.name.toLowerCase().includes(name.toLowerCase())) return false;
+      if (
+        !clearAccents(el.name.toLowerCase()).includes(
+          clearAccents(name.toLowerCase())
+        )
+      )
+        return false;
 
       if (type !== "todos") {
         if (el.type !== type) return false;
