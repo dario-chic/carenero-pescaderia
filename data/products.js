@@ -237,7 +237,7 @@ const products = [
     type: "lomos",
     price: 8,
     pricexu: 5,
-    description: "Lomo de Aguja Fresco, peso a preferencia del cliente.",
+    description: "Lomo de Aguja Fresco, paquetes de aprox. 500g - 800g.",
     img: "/products/aguja-lomos.webp",
     available: true,
   },
