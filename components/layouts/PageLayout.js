@@ -13,7 +13,7 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         <meta charSet="utf-8" />
         <link
           rel="icon"
-          href="https://www.pescaderiacarenero.com/logo.ico"
+          href="https://pescaderia-carenero.vercel.appaderiacarenero.com/logo.ico"
           type="image/ico"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,9 +35,9 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         <meta name="robots" content="index" />
         <meta
           name="image"
-          content="https://www.pescaderiacarenero.com/portada.webp"
+          content="https://pescaderia-carenero.vercel.appaderiacarenero.com/portada.webp"
         />
-        <link rel="canonical" href="https://www.pescaderiacarenero.com/" />
+        <link rel="canonical" href="https://pescaderia-carenero.vercel.appaderiacarenero.com/" />
         <link rel="apple-touch-icon" sizes="192x192" href="logo192x192.png" />
         <link rel="apple-touch-icon" sizes="512x512" href="logo512x512.png" />
 
@@ -51,9 +51,9 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         />
         <meta
           property="og:image"
-          content="https://www.pescaderiacarenero.com/portada.webp"
+          content="https://pescaderia-carenero.vercel.appaderiacarenero.com/portada.webp"
         />
-        <meta property="og:url" content="https://www.pescaderiacarenero.com/" />
+        <meta property="og:url" content="https://pescaderia-carenero.vercel.appaderiacarenero.com/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* <meta name="twitter:creator" content="@dariochic" /> */}
@@ -67,7 +67,7 @@ const PageLayout = ({ children, title, description, header, nav }) => {
         />
         <meta
           name="twitter:image"
-          content="https://www.pescaderiacarenero.com/portada.webp"
+          content="https://pescaderia-carenero.vercel.appaderiacarenero.com/portada.webp"
         />
       </Head>
       {nav}
