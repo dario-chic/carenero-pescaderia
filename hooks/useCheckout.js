@@ -136,7 +136,7 @@ ${
 Eso sería todo ¡Gracias de antemano! Quedo pendiente a su respuesta para concretar y continuar con el pedido.
 %20%0a%20%0a
 
-https://pescaderia-carenero.vercel.app.com/
+https://carenero-pescaderia.vercel.app/
   `;
       setLoading(false);
 

@@ -22,7 +22,7 @@ const Catalogo = () => {
     setLoading(true);
     setError(false);
     helpHttp()
-      .get("https://pescaderia-carenero.vercel.app.com/api/products")
+      .get("https://carenero-pescaderia.vercel.app/api/products")
       .then((products) => {
         if (!products.err) {
           dispatch(addProducts(products));
