@@ -1,34 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Pescadería Carenero
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Portada](https://raw.githubusercontent.com/dario-chic/carenero-pescaderia/refs/heads/main/banner.webp)
+![Badge](https://img.shields.io/badge/Status-Finished-brightgreen)
+![Badge](https://img.shields.io/badge/License-MIT-blue)
+## Table of contents
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [Description](#description)
+- [Main features](#main-features)
+- [Tech Stack](#tech-stack)
+- [How to use](#how-to-use)
+- [Live demo](#live-demo)
+- [Contribution](#contribution)
+- [License](#license)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  
+## Description
+**Pescadería Carenero**  is an e-commerce website designed for a local seafood company specializing in artisanal marine products. The platform allows customers to browse, select, and purchase products seamlessly. It features a shopping cart managed with  **Redux**, a user-friendly checkout flow, and integration with the  **WhatsApp API**  for order confirmation.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+_💡 This project represents one of my early experiences with  **Redux**  and complex user flows. While it’s not perfect, it was a crucial step in my journey as a developer, teaching me valuable lessons about state management, UI/UX design, and integrating third-party services._
 
-## Learn More
+## Main Features
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Global State Management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The website uses  **Redux**  to manage the global state, particularly for the shopping cart. This ensures a seamless and consistent user experience across the application.
 
-## Deploy on Vercel
+### Shopping Cart
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Users can add, edit, and remove products from their cart and product cards. The state is preserved throughout the user's session, allowing for a smooth shopping experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Checkout Flow
+
+The checkout process includes:
+
+-   A review page where users can confirm their order and make last-minute changes.
+    
+-   A form to enter personal and delivery information.
+    
+-   Integration with the  **WhatsApp API**  to automatically generate a message with the order details, which is sent directly to the company for processing.
+    
+
+### Product Search and Filtering
+
+Users can easily search for products and apply filters to find exactly what they're looking for.
+
+## Tech Stack
+
+-   **Frontend:**
+    -   [Next.js](https://nextjs.org/)  (Framework)
+    -   [React](https://reactjs.org/)  (Library)
+    -   [Sass](https://sass-lang.com/)  (Styling)
+    -   [Redux](https://redux.js.org/)  (State Management)
+        
+-   **Deployment:**
+    -   [Vercel](https://vercel.com/)  (Hosting)
+
+## How to use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dario-chic/carenero-pescaderia.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd carenero-pescaderia
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+	 ```bash
+   npm run dev
+   ```
+
+## Live Demo
+
+[See live demo](https://carenero-pescaderia.vercel.app/)
+
+## Contribution
+
+
+Contributions are welcome! If you have ideas to improve this project, find a bug, or simply want to add a new feature, feel free to open an issue or submit a pull request. Thank you for your interest in contributing!
+
+1. Fork the project.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Open a Pull Request.
+
+## License 📜
+Distributed under the [MIT License](https://opensource.org/licenses/MIT). See LICENSE.txt for more information.
+
+---
+
+Made with ❤️ by [Dario Chic](https://github.com/dario-chic)  
+📧 Contact me: [contact@dariochic.dev](mailto:contact@dariochic.dev)  
+🔗 [LinkedIn](https://www.linkedin.com/in/dariochic/) | [Portfolio](https://dariochic.dev)
